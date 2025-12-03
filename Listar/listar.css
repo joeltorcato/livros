@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: #f6f7f9;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e5e7eb;
+  padding: 50px 60px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.header p {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.stats {
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 30px;
+  border: 1px solid #e5e7eb;
+}
+
+.stats p {
+  font-size: 1.1rem;
+  color: #512da8;
+  font-weight: 600;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.book-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 15px;
+  padding: 25px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.book-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.book-card:hover {
+  border-color: #cbd5e1;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.book-card h3 {
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.book-info {
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.book-info p {
+  margin-bottom: 8px;
+}
+
+.book-info strong {
+  color: #111827;
+  font-weight: 600;
+}
+
+.no-books {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+  font-size: 1.1rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.btn {
+  height: 40px;
+  padding: 0 18px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 40px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.04s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-primary {
+  background: #111827;
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.message {
+  background: #f3f4f6;
+  color: #111827;
+  border-left: 4px solid #9ca3af;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.warning-box {
+  background: #f9fafb;
+  border-left: 4px solid #9ca3af;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 25px;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .books-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
